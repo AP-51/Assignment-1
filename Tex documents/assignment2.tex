@@ -1,0 +1,128 @@
+\let\negmedspace\undefined{}
+\let\negthickspace\undefined{}
+%\RequirePackage{amsmath}
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+%
+% \usepackage{setspace}
+ \usepackage{gensymb}
+%\doublespacing
+ \usepackage{polynom}
+%\singlespacing
+%\usepackage{silence}
+%Disable all warnings issued by latex starting with "You have..."
+%\usepackage{graphicx}
+\usepackage{amssymb}
+%\usepackage{relsize}
+\usepackage[cmex10]{amsmath}
+%\usepackage{amsthm}
+%\interdisplaylinepenalty=2500
+%\savesymbol{iint}
+%\usepackage{txfonts}
+%\restoresymbol{TXF}{iint}
+%\usepackage{wasysym}
+\usepackage{amsthm}
+%\usepackage{pifont}
+%\usepackage{iithtlc}
+% \usepackage{mathrsfs}
+% \usepackage{txfonts}
+ \usepackage{stfloats}
+% \usepackage{steinmetz}
+ \usepackage{bm}
+% \usepackage{cite}
+% \usepackage{cases}
+% \usepackage{subfig}
+%\usepackage{xtab}
+\usepackage{longtable}
+%\usepackage{multirow}
+%\usepackage{algorithm}
+%\usepackage{algpseudocode}
+\usepackage{enumitem}
+ \usepackage{mathtools}
+ \usepackage{tikz}
+% \usepackage{circuitikz}
+% \usepackage{verbatim}
+%\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+%\usepackage{stmaryrd}
+%\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+%\usetkzobj{all}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+  %optionally (for landscape tables embedded in another document): %%
+    \usepackage{lscape}     
+% \usepackage{multicol}
+% \usepackage{chngcntr}
+%\usepackage{enumerate}
+%\usepackage{wasysym}
+%\newcounter{MYtempeqncnt}
+\DeclareMathOperator*{\Res}{Res}
+\DeclareMathOperator*{\equals}{=}
+%\renewcommand{\baselinestretch}{2}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+%\lstset{
+%language=tex,
+%frame=single, 
+%breaklines=true
+%}
+
+\title{Assignment 1 \\ \Large AI1110: Probability and Random Variables \\ \large Indian Institute of Technology Hyderabad}
+\author{Aayush Prabhu \\ \normalsize AI21BTECH11002 \\ \vspace*{20pt} \normalsize  19 April 2022 \\ \vspace*{20pt} \Large ICSE 2017 Grade 12}
+\begin{document}
+       \newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+       \let\vec\mathbf
+       \maketitle
+       \textbf{Question 2(b)}\\
+       \textbf{Question:} Given that: \begin{align} \vec{A} = \myvec{1 & -1 & 0\\2 & 3 & 4\\0 & 1 & 2}\nonumber \\ and\:\vec{B} = \myvec{2 & 2 & -4\\-4 & 2 & -4\\2 & -1 &5} \nonumber 
+       \end{align}, find $\vec{AB}$.\\
+       Using this result, solve the following system of equation:
+       \begin{align} x-y=3,\:2x+3y+4z=17\:and\:y+2z=7\nonumber 
+       \end{align}\\
+       \textbf{Solution:} 
+       \begin{align}
+          &\vec{AB} = \myvec{1 & -1 & 0\\2 & 3 & 4\\0 & 1 & 2}.\myvec{2 & 2 & -4\\-4 & 2 & -4\\2 & -1 &5}\nonumber&&\\
+        &\vec{AB} = \myvec{2+4+0 & 2-2+0 & -4+4+0\\4-12+8 & 4+6-4 & -8-12+20\\0-4+4 & 0+2-2 & 0-4+10}\nonumber&&\\
+        &\implies \vec{AB} = \myvec{6 & 0 & 0\\0 & 6 & 0\\0 & 0 & 6}&&\\
+        &\implies \vec{AB} = 6\vec{I}&&
+        \end{align} 
+        Where $\vec{I}$ is the Identity Matrix of order 3\\
+        Now, let us write the following system of equations in matrix form:
+        \begin{align} 
+        &x-y=3,\:2x+3y+4z=17\: and \:y+2z=7 &&\nonumber\\
+        &\implies \myvec{1 & -1 & 0\\2 & 3 & 4\\0 & 1 & 2}.\myvec{x\\y\\z} = \myvec{3\\17\\7}&& \nonumber
+        \end{align} 
+        Now $\myvec{1 & -1 & 0\\2 & 3 & 4\\0 & 1 & 2}$ is basically $\vec{A}$.\\
+        Let $\myvec{x\\y\\z}$ be $\vec{C}$ and $\myvec{3\\17\\7}$ be $\vec{D}$
+        $ \therefore \vec{AC}=\vec{D}$
+        To solve this system of equations we need to find $\vec{C}$\\
+        \begin{align}
+        &\implies \vec{C} = \vec{A}^{-1}\vec{D} &&\\
+        &and, \vec{AB}=6\vec{I} &&\\
+        &\implies \vec{A}^{-1} = \dfrac{\vec{B}}{6} &&\\
+        &\implies \vec{C} = \dfrac{\vec{BD}}{6 }&&\\
+        &\therefore \vec{C} = \dfrac{1}{6}\myvec{2 & 2 & -4\\-4 & 2 &-4\\2 & -1 & 5}.\myvec{3\\17\\7} &&\\
+        &\implies \vec{C} = \dfrac{1}{6}\myvec{6+34-28\\-12+34-28\\6-17+35 }&&\\
+        &\implies \vec{C} = \dfrac{1}{6}\myvec{12\\-6\\24} &&\\
+        &\implies \vec{C} = \myvec{2\\-1\\4} &&\\
+        &\therefore x=2,y=-1,z=4&&
+        \end{align} is the solution for this system of equations.\\
+\end{document}
