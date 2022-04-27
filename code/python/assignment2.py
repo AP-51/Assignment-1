@@ -8,7 +8,7 @@ result= [[0,0,0],
         [0,0,0],
         [0,0,0]]
  
-result = np.dot(A,B)
+result = np.array(A)@np.array(B)
 print("product matrix is:") 
 for r in result:
     print(r)
