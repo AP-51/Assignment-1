@@ -1,0 +1,126 @@
+\let\negmedspace\undefined{}
+\let\negthickspace\undefined{}
+%\RequirePackage{amsmath}
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+%
+% \usepackage{setspace}
+ \usepackage{gensymb}
+%\doublespacing
+ \usepackage{polynom}
+%\singlespacing
+%\usepackage{silence}
+%Disable all warnings issued by latex starting with "You have..."
+%\usepackage{graphicx}
+\usepackage{amssymb}
+%\usepackage{relsize}
+\usepackage[cmex10]{amsmath}
+%\usepackage{amsthm}
+%\interdisplaylinepenalty=2500
+%\savesymbol{iint}
+%\usepackage{txfonts}
+%\restoresymbol{TXF}{iint}
+%\usepackage{wasysym}
+\usepackage{amsthm}
+%\usepackage{pifont}
+%\usepackage{iithtlc}
+% \usepackage{mathrsfs}
+% \usepackage{txfonts}
+ \usepackage{stfloats}
+% \usepackage{steinmetz}
+ \usepackage{bm}
+% \usepackage{cite}
+% \usepackage{cases}
+% \usepackage{subfig}
+%\usepackage{xtab}
+\usepackage{longtable}
+%\usepackage{multirow}
+%\usepackage{algorithm}
+%\usepackage{algpseudocode}
+\usepackage{enumitem}
+ \usepackage{mathtools}
+ \usepackage{tikz}
+% \usepackage{circuitikz}
+% \usepackage{verbatim}
+%\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+%\usepackage{stmaryrd}
+%\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+%\usetkzobj{all}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+  %optionally (for landscape tables embedded in another document): %%
+    \usepackage{lscape}     
+% \usepackage{multicol}
+% \usepackage{chngcntr}
+%\usepackage{enumerate}
+%\usepackage{wasysym}
+%\newcounter{MYtempeqncnt}
+\DeclareMathOperator*{\Res}{Res}
+\DeclareMathOperator*{\equals}{=}
+%\renewcommand{\baselinestretch}{2}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+%\lstset{
+%language=tex,
+%frame=single, 
+%breaklines=true
+%}
+
+\title{Assignment 1 \\ \Large AI1110: Probability and Random Variables \\ \large Indian Institute of Technology Hyderabad}
+\author{Aayush Prabhu \\ \normalsize AI21BTECH11002 \\ \vspace*{20pt} \normalsize  19 April 2022 \\ \vspace*{20pt} \Large CBSE Probabaility Grade 10}
+\begin{document}
+       \maketitle
+       \textbf{Question 20}\\
+       \textbf{Question:} Suppose you drop a die at random in the rectangular region as shown in the figure. what is the probability that the die will land in the circle with diameter 1m? 
+       \begin{figure}[h]
+       \includegraphics[width=0.5\textwidth]{Figure_1.png}
+       \caption{Rectangular region with length $3m$ and breadth $2m$, and a circle with diameter with $1m $ in it.}
+       \label{fig:my_label}
+       \end{figure}
+       \textbf{Solution:}\\
+       \begin{table}[h]
+    \label{tab:table1}
+    \begin{tabular}{l|c|c} 
+    \hline
+      \textbf{Parameter} & \textbf{Symbol} & \textbf{Value}\\
+      \hline
+      Radius Of Circle (in metre)  & $r$ & $0.5$ \\
+      \hline
+      Length of rectangle(in metre) & $l$ & $3$\\
+      \hline
+      Breadth of Rectangle(in metre) & $b$ & $2$\\
+      \hline
+      Area of Circle & $A_c$, where $A_c=\pi r^2$ & To be Calculated\\
+      \hline
+      Area of Rectangle & $A_r$, where $A_r=l\times b$ & To be Calculated\\
+      \hline
+    \end{tabular}
+    \end{table}\\
+           Probability of die falling in the circle would be:\\
+       \begin{align}
+       P=\dfrac{Favourable Area}{Total Area}\\
+       \therefore P=\dfrac{Area of Circle}{Area of Rectangle}\\
+       \end{align}
+    Area of Circle $A_c=\pi\times(0.5)^2 \implies A_c=0.785$\\
+    Area of Rectangle $A_r=l\times b \implies A_r=6$\\
+    Hence Probability $P=\dfrac{0.785}{6} \implies P=0.1308$\\ 
+\end{document}
