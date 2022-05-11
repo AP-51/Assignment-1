@@ -1,0 +1,113 @@
+\let\negmedspace\undefined{}
+\let\negthickspace\undefined{}
+%\RequirePackage{amsmath}
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+%
+% \usepackage{setspace}
+ \usepackage{gensymb}
+%\doublespacing
+ \usepackage{polynom}
+%\singlespacing
+%\usepackage{silence}
+%Disable all warnings issued by latex starting with "You have..."
+%\usepackage{graphicx}
+\usepackage{amssymb}
+%\usepackage{relsize}
+\usepackage[cmex10]{amsmath}
+%\usepackage{amsthm}
+%\interdisplaylinepenalty=2500
+%\savesymbol{iint}
+%\usepackage{txfonts}
+%\restoresymbol{TXF}{iint}
+%\usepackage{wasysym}
+\usepackage{amsthm}
+%\usepackage{pifont}
+%\usepackage{iithtlc}
+% \usepackage{mathrsfs}
+% \usepackage{txfonts}
+ \usepackage{stfloats}
+% \usepackage{steinmetz}
+ \usepackage{bm}
+% \usepackage{cite}
+% \usepackage{cases}
+% \usepackage{subfig}
+%\usepackage{xtab}
+\usepackage{longtable}
+%\usepackage{multirow}
+%\usepackage{algorithm}
+%\usepackage{algpseudocode}
+\usepackage{enumitem}
+ \usepackage{mathtools}
+ \usepackage{tikz}
+% \usepackage{circuitikz}
+% \usepackage{verbatim}
+%\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+%\usepackage{stmaryrd}
+%\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+%\usetkzobj{all}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+  %optionally (for landscape tables embedded in another document): %%
+    \usepackage{lscape}     
+% \usepackage{multicol}
+% \usepackage{chngcntr}
+%\usepackage{enumerate}
+%\usepackage{wasysym}
+%\newcounter{MYtempeqncnt}
+\DeclareMathOperator*{\Res}{Res}
+\DeclareMathOperator*{\equals}{=}
+%\renewcommand{\baselinestretch}{2}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+%\lstset{
+%language=tex,
+%frame=single, 
+%breaklines=true
+%}
+
+\title{Assignment 1 \\ \Large AI1110: Probability and Random Variables \\ \large Indian Institute of Technology Hyderabad}
+\author{Aayush Prabhu \\ \normalsize AI21BTECH11002 \\ \vspace*{20pt} \normalsize  19 April 2022 \\ \vspace*{20pt} \Large CBSE Probabaility Grade 10}
+\begin{document}
+       \maketitle
+       \textbf{Example 22}\\
+       \textbf{Question:}A person plays a game of tossing a coin thrice. For each head, he is
+        given Rs $2$ by the organiser of the game and for each tail, he has to give Rs $1.50$ to the
+        organiser. Let $X$ denote the amount gained or lost by the person. Show that $X$ is a
+        random variable and exhibit it as a function on the sample space of the experiment.\\
+       \textbf{Solution:}X is a number whose values are defined on the outcomes of a random
+        experiment. Therefore, X is a random variable.\\
+        Now, sample space of the experiment is:\\
+        S = {HHH, HHT, HTH, THH, HTT, THT, TTH, TTT}
+        \begin{align}
+        &\therefore \nonumber\\
+        &X(HHH)= 3\times Rs2 = Rs6\\
+        &X(HHT)=X(HTH)=X(THH)\nonumber\\
+        & =2\times Rs2-Rs1.5=Rs2.5\\
+        &X(HTT)=X(THT)=X(TTH)\nonumber\\
+        & =Rs2-2\times Rs1.5=-Rs1\\
+        &X(TTT)= 3\times Rs(-1.5) = -Rs4.5
+        \end{align}
+        Minus sign indicates a loss to the player. Thus, for each element of the sample
+        space, $X$ takes a unique value, hence, $X$ is a function on the sample space.\\
+        Range of $X$ is [$-4.5,-1,2.5,6$]\\
+\end{document}
