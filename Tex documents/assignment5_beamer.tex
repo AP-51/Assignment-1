@@ -1,0 +1,130 @@
+\let\negmedspace\undefined{}
+\let\negthickspace\undefined{}
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+ \usepackage{gensymb}
+ \usepackage{polynom}
+\usepackage{amssymb}
+%\usepackage[cmex10]{amsmath}
+\usepackage{amsthm}
+ \usepackage{stfloats}
+\usepackage{bm}
+ \usepackage{longtable}
+ \usepackage{enumitem}
+ \usepackage{mathtools}
+ \usepackage{tikz}
+ %\usepackage[breaklinks=true]{hyperref}
+\usepackage{listings}
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                        
+\usepackage{calc}                                             
+    \usepackage{multirow}                                         
+    \usepackage{hhline}                                           
+    \usepackage{ifthen}                                           
+    \usepackage{lscape}     
+\DeclareMathOperator*{\Res}{Res}
+\DeclareMathOperator*{\equals}{=}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+% \renewcommand\thesectiondis{\arabic{section}}
+% \renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+% \renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+\lstset{
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+% \newtheorem{theorem}{Theorem}[section]
+% \newtheorem{problem}{Problem}
+% \newtheorem{proposition}{Proposition}[section]
+% \newtheorem{lemma}{Lemma}[section]
+% \newtheorem{corollary}[theorem]{Corollary}
+% \newtheorem{example}{Example}[section]
+% \newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\newcommand*\circled[1]{\tikz[baseline= (char.base)]{
+    \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+\bibliographystyle{IEEEtran}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.]}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left[#1\right.]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.)}
+\providecommand{\rbrak}[1]{\ensuremath{\left[#1\right.]}}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+% \newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\newcommand*{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
+\newcommand*{\perm}[1][-3mu]{\permcomb[#1]{P}}
+\newcommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
+\renewcommand{\thetable}{\arabic{table}} 
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure{}
+\let\vec\mathbf{}
+%\renewcommand{\thefigure}{\theproblem}
+\title{Assignment 5 Papoulis-Pillai Chapter 2 Example 2.15 }
+\author{Aayush Prabhu (AI21BTECH11002)}
+\date{\today}
+\logo{\large \LaTeX}
+
+\begin{frame}
+    \titlepage 
+  \end{frame}
+  \logo{}
+  \begin{frame}{Outline}
+    \tableofcontents
+  \end{frame}
+       \section{Question}
+       \begin{frame}{Question}
+       \textbf{Question:}A certain test for a particular cancer is known to be 95 percent accurate. A person submits to the test and the results are positive. Suppose that the person comes from a population
+of 100,000, where 2000 people suffer from that disease. What can we conclude about the probability that the person under test has that particular cancer? .\\
+        \end{frame}
+        \section{Solution}
+        \begin{frame}{Solution}
+       \textbf{Solution:}The test is known to be 95 percent accurate, which means that 95 percent of all positive tests are correct and 95 percent of all negative tests are correct.\\
+        Let the event $T>0$ stand for the test being positive and $T<0$ stand for the test being negative. Also let $H$ and $C$ represent the sets of healthy people and cancerous patients respectively.\\
+        \begin{align}
+        &\therefore P(T>0|C)= 0.95 && P(T>0|H)= 0.05\\
+        &P(T<0|C)= 0.05 && P(T<0|H)= 0.95\\
+        \end{align}
+        But in this case we have 98000 healthy people and 2000 sick people $\therefore$ without any other conditions $P(H)=0.98$  and $P(C)=0.08$. 
+        \end{frame}
+        \begin{frame}
+        Using Bayes' theorem, probability that the person suffers from cancer givent that the test result is positive:
+        \begin{align}
+        & P(C|T>0)= \dfrac{P(T>0|C)P(C)}{P(T>0)}= \dfrac{P(T>0|C)P(C)}{P(T>0|C)P(C)+P(T>0|H)P(H)}\nonumber \\
+        & = \dfrac{0.95\times0.02}{0.95\times0.02+0.05\times0.98} &&=0.279 \nonumber
+        \end{align}
+        This result of this test states that if the test is taken by a person from this population without knowing that they have the disease or not, then a positive test states that the person has a 27.9 percent chance of having the disease. However if the person knows that they have the disease then probability of getting a positive test result i.e $P(T>0|C)=0.95$ or 95 percent \\
+        \end{frame}
+\end{document}
